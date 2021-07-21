@@ -5,6 +5,7 @@ import React, { useState, useEffect } from 'react';
 import Herolmage from './HeroImage';
 import Grid from './Grid';
 import Thumb from './thumb';
+import Spinner from './Spinner';
 
 // config
 import { POSTER_SIZE, BACKDROP_SIZE, IMAGE_BASE_URL } from '../config'
@@ -48,6 +49,7 @@ const Home = () => {
                     ))
                 }
             </Grid>
+            <Spinner />
         </>
     );
 };
