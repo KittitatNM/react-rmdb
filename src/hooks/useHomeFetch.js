@@ -4,7 +4,7 @@ import API from '../API';
 
 const initialState = {
     page: 0,
-    result: [],
+    results: [],
     total_pages: 0,
     total_results: 0
 }
@@ -23,7 +23,8 @@ export const useHomeFetch = () => {
             console.log(movies);
 
             setState(prev => ({
-                ...movies, results: page > 1 ? [...prev.results, ...movies.results] : [...movies.results]
+                ...movies,
+                results: page > 1 ? [...prev.results, ...movies.results] : [...movies.results]
             }));
         } catch (error) {
             setError(true);
