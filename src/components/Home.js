@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 
 // components
 import Herolmage from './HeroImage';
+import Grid from './Grid';
 
 // config
 import { POSTER_SIZE, BACKDROP_SIZE, IMAGE_BASE_URL } from '../config'
@@ -31,6 +32,13 @@ const Home = () => {
                     text={state.results[0].overview}
                 />
             ) : null}
+            <Grid header='Popular Movies'>
+                {
+                    state.results.map(movie => (
+                        <div key={movie.id}>{movie.title}</div>
+                    ))
+                }
+            </Grid>
         </>
     );
 };
