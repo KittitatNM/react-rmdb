@@ -1,4 +1,6 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+
 
 import { Wrapper, Content, Text } from './Herolmage.styles'
 
@@ -12,5 +14,11 @@ const Herolmage = ({ image, title, text }) => (
         </Content>
     </Wrapper>
 );
+
+Herolmage.propTypes = {
+    image: PropTypes.string,
+    title: PropTypes.string,
+    text: PropTypes.string
+}
 
 export default Herolmage;
